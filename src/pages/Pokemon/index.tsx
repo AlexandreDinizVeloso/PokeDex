@@ -28,7 +28,7 @@ function Pokemon() {
   }, [params.pokemon]);
 
   if (loading) {
-    return <div>Procurando...</div>;
+    return;
   }
 
   if (!currentPokemon) {

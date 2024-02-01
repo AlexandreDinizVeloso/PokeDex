@@ -11,16 +11,15 @@ nav {
 }
 
 nav a {
-  text-align: center;
-  align-self: center;
-  justify-self: center;
-  margin: 1rem;
   color: #c4c8c5;
   padding: 10px 20px 10px 20px;
+  margin: 1rem;
   background-color: #3A463E;
   border-radius: 25px;
   box-shadow: inset 0 0 0 0 #2ACCAD;
-  transition: color .3s ease-in-out, box-shadow .5s ease-in-out, background-color .7s ease-in-out;
+  transition: color 0.3s ease-in-out,
+              box-shadow 0.5s ease-in-out,
+              background-color 0.7s ease-in-out;
 }
 
 nav a:hover {
@@ -32,4 +31,11 @@ nav a:hover {
 .active {
   font-weight: 700;
   color: #2ACCAD;
+}
+
+@media screen and (max-width: 768px) {
+  nav a {
+    padding: 10px 10px 10px 10px;
+    margin: 1dvh 1dvw 1dvh 1dvw;
+  }
 }

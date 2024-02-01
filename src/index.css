@@ -19,8 +19,7 @@ a {
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: calc(100dvh - 76px);
   background-color: #e0dde0;
 }
 

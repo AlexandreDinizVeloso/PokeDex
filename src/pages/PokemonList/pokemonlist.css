@@ -1,8 +1,7 @@
-
 .list-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list-page h1 {
@@ -12,28 +11,32 @@
 }
 
 .pokemon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-column-gap: 10px;
   margin-bottom: 90px;
 }
 
 .pokemon-card {
+  display: grid;
+  grid-template-columns: 1 1;
   background-color: #698880;
   background-blend-mode: multiply;
-  text-align: center;
-  width: 20vw;
-  height: 20vh;
+  border-color: #3A463E;
+  width: 20dvw;
+  height: 20dvh;
   margin-top: 30px;
   border-radius: 10px;
   color: #c4c8c5;
   font-size: 1rem;
+  padding: 10px 10px 10px 10px;
   background-position: 50%;
-  background-size: contain;
+  background-size: 60%;
   background-repeat: no-repeat;
-  transition: translate 0.2s ease-in-out,
+  transition: transform 0.2s ease-in-out,
               background-color 0.1s ease-out,
-              font-size 0.3s ease-in-out;
+              font-size 0.3s ease-in-out,
+              background-size 1. ease-in-out;
 }
 
 .pokemon-card:hover {
@@ -41,7 +44,19 @@
   background-color: #3A463E;
   color: #F9F7F9;
   background-size: 75%;
-  translate: 0 -5px;
+  transform: translateY(-5px);
+}
+
+#pokemon-name {
+  display: flex;
+}
+
+#pokemon-id {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
 }
 
 .pagination-buttons {
@@ -66,7 +81,7 @@
   color: #c4c8c5;
   padding: 10px 20px 10px 20px;
   box-shadow: inset 0 0 0 0 #2ACCAD;
-  transition: color .3s ease-in-out, box-shadow .5s ease-in-out, background-color 0.6s;
+  transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.6s;
   font-size: 0.75rem;
 }
 
@@ -76,16 +91,16 @@
   background-color: #F9F7F9 !important;
 }
 
-#pagination-number{
+#pagination-number {
   padding: 5px 15px 5px 15px;
   margin: 0 2px 0 2px;
 }
 
-#pagination-previous{
+#pagination-previous {
   margin-right: 10px;
 }
 
-#pagination-next{
+#pagination-next {
   margin-left: 10px;
 }
 
@@ -102,7 +117,17 @@
 
 .pokemon-page {
   text-align: center;
-  width: 100%;
 }
 
-
+@media screen and (max-width: 768px) {
+  .pokemon-container {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+  .pokemon-card {
+    width: 40dvw;
+    font-size: 0.8rem;
+  }
+  .pokemon-card:hover {
+    font-size: 1rem;
+  }
+}
