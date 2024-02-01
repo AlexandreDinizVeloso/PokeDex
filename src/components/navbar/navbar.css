@@ -1,0 +1,35 @@
+nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3A463E;
+  z-index: 1;
+}
+
+nav a {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  margin: 1rem;
+  color: #c4c8c5;
+  padding: 10px 20px 10px 20px;
+  background-color: #3A463E;
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 0 #2ACCAD;
+  transition: color .3s ease-in-out, box-shadow .5s ease-in-out, background-color .7s ease-in-out;
+}
+
+nav a:hover {
+  box-shadow: inset 125px 0 0 0 #2ACCAD;
+  color: #F9F7F9;
+  background-color: #F9F7F9;
+}
+
+.active {
+  font-weight: 700;
+  color: #2ACCAD;
+}
