@@ -1,7 +1,7 @@
-function Jogos() {
+function Move() {
     return (
       <h1>CoffeeList page</h1>
     )
   }
   
-  export default Jogos;
+  export default Move;

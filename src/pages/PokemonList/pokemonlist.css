@@ -13,16 +13,17 @@
 .pokemon-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-column-gap: 10px;
+  grid-column-gap: 25px;
   margin-bottom: 90px;
 }
 
 .pokemon-card {
+  position: relative;
   display: grid;
   grid-template-columns: 1 1;
   background-color: #698880;
   background-blend-mode: multiply;
-  border-color: #3A463E;
+  border: none;
   width: 20dvw;
   height: 20dvh;
   margin-top: 30px;
@@ -30,25 +31,41 @@
   color: #c4c8c5;
   font-size: 1rem;
   padding: 10px 10px 10px 10px;
-  background-position: 50%;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  transition: transform 0.2s ease-in-out,
-              background-color 0.1s ease-out,
+  transition: transform 0.3s ease-in-out,
+              background-color 0.2s ease-out,
               font-size 0.3s ease-in-out,
-              background-size 1. ease-in-out;
+              background-size 0.2s ease-in;
 }
 
 .pokemon-card:hover {
   font-size: 1.5rem;
   background-color: #3A463E;
   color: #F9F7F9;
-  background-size: 75%;
   transform: translateY(-5px);
+  background-size: 200% !important;
+}
+
+.pokemon-card:hover > #pokemon-img {
+  width: calc(20dvw - 25%);
+  height: calc(20dvh - 25%);
+}
+
+#pokemon-img {
+  position: absolute;
+  top: calc(50% + 1rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10dvw;
+  height: 10dvh;
+  transition: width 0.3s ease-in-out,
+              height 0.3s ease-in-out;
 }
 
 #pokemon-name {
   display: flex;
+  font-family: "Protest Strike";
+  font-style: normal;
+  font-weight: 100;
 }
 
 #pokemon-id {
@@ -67,7 +84,7 @@
   align-items: center;
   justify-content: center;
   background-color: #3A463E;
-  z-index: 1;
+  z-index: 2;
   padding: 15px 0 15px 0;
 }
 
@@ -79,7 +96,7 @@
   background-color: #698880;
   border-radius: 25px;
   color: #c4c8c5;
-  padding: 10px 20px 10px 20px;
+  padding: 3px 10.5px;
   box-shadow: inset 0 0 0 0 #2ACCAD;
   transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.6s;
   font-size: 0.75rem;
@@ -97,11 +114,11 @@
 }
 
 #pagination-previous {
-  margin-right: 10px;
+  margin-right: 2px;
 }
 
 #pagination-next {
-  margin-left: 10px;
+  margin-left: 2px;
 }
 
 .pokemon-card h3 {

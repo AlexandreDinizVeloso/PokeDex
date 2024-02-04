@@ -6,8 +6,7 @@ function NavBar() {
     <nav>
       <NavLink to="/">Sobre</NavLink>
       <NavLink to="/PokemonList">Pokemón</NavLink>
-      <NavLink to="/Jogos">Jogos</NavLink>
-      <NavLink to="/Moves">Moves</NavLink>
+      <NavLink to="/MoveList">Move List</NavLink>
     </nav>
   )
 }
