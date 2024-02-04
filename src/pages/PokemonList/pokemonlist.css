@@ -74,6 +74,9 @@
   justify-content: flex-end;
   align-items: flex-end;
   align-content: flex-end;
+  font-family: "Protest Strike";
+  font-style: normal;
+  font-weight: bold;
 }
 
 .pagination-buttons {
